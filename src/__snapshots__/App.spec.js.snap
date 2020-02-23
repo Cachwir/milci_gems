@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match its reference snapshot 1`] = `
+<BrowserRouter>
+  <div
+    id="wrapper"
+  >
+    <Header />
+    <withRouter(MenuWithoutRouter)
+      Parent={
+        App {
+          "context": Object {},
+          "props": Object {},
+          "refs": Object {},
+          "routerEvents": Array [],
+          "setState": [Function],
+          "state": null,
+          "updater": Updater {
+            "_callbacks": Array [],
+            "_renderer": ReactShallowRenderer {
+              "_context": Object {},
+              "_didScheduleRenderPhaseUpdate": false,
+              "_dispatcher": Object {
+                "readContext": [Function],
+                "useCallback": [Function],
+                "useContext": [Function],
+                "useDebugValue": [Function],
+                "useDeferredValue": [Function],
+                "useEffect": [Function],
+                "useImperativeHandle": [Function],
+                "useLayoutEffect": [Function],
+                "useMemo": [Function],
+                "useReducer": [Function],
+                "useRef": [Function],
+                "useResponder": [Function],
+                "useState": [Function],
+                "useTransition": [Function],
+              },
+              "_element": <App />,
+              "_firstWorkInProgressHook": null,
+              "_forcedUpdate": false,
+              "_instance": [Circular],
+              "_isReRender": false,
+              "_newState": null,
+              "_numberOfReRenders": 0,
+              "_renderPhaseUpdates": null,
+              "_rendered": <BrowserRouter>
+                <div
+                  id="wrapper"
+                >
+                  <Header />
+                  <withRouter(MenuWithoutRouter)
+                    Parent={[Circular]}
+                  />
+                  <withRouter(AppRouterWithoutRouter)
+                    onRouteChangeEvents={Array []}
+                  />
+                  <Footer />
+                </div>
+              </BrowserRouter>,
+              "_rendering": false,
+              "_updater": [Circular],
+              "_workInProgressHook": null,
+            },
+          },
+        }
+      }
+    />
+    <withRouter(AppRouterWithoutRouter)
+      onRouteChangeEvents={Array []}
+    />
+    <Footer />
+  </div>
+</BrowserRouter>
+`;

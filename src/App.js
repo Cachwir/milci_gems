@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+import Header from "./layout/Header";
+import Menu from "./layout/Menu";
+import Footer from "./layout/Footer";
+import AppRouter from "./AppRouter";
+import {BrowserRouter as Router} from "react-router-dom";
+
+class App extends Component {
+
+  /**
+   * L'appli sera composée de trois pages :
+   * - une page de garde
+   * - une gallerie
+   * - à propos (pour expliquer comment ce site a été fait, dans quel contexte et ajouter des remerciements et des
+   * sources)
+   */
+
+  routerEvents = [];
+
+  registerRouterEvent(event)
+  {
+      this.routerEvents.push(event);
+  }
+
+  render() {
+      return (
+          <Router>
+              <div id="wrapper">
+                  <Header />
+                  <Menu Parent={this} />
+                  <AppRouter onRouteChangeEvents={this.routerEvents}  />
+                  <Footer />
+              </div>
+          </Router>
+      );
+  }
 }
 
 export default App;

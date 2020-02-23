@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Gallery /> should match its reference snapshot 1`] = `
+<section
+  className="gallery"
+>
+  <div
+    id="content"
+  >
+    <div
+      className="container floated"
+    >
+      <div
+        className="gallery-current-element eleven floated left"
+      >
+        <AnimatedSwitch
+          atActive={
+            Object {
+              "marginLeft": 0,
+              "opacity": 1,
+            }
+          }
+          atEnter={
+            Object {
+              "marginLeft": -100,
+              "opacity": 0,
+            }
+          }
+          atLeave={
+            Object {
+              "marginLeft": 0,
+              "opacity": 0,
+            }
+          }
+          className="switch-wrapper"
+        >
+          <Route
+            exact={true}
+            key="-1"
+            path="/gallery"
+          >
+            <GalleryImage
+              getAccessUrl={[Function]}
+              path="/assets/dynamic/postImages/image-0.jpg"
+              source="#"
+              subTitle="subtitle-0"
+              text="text-0"
+              title="title-0"
+            />
+          </Route>
+          <Route
+            exact={true}
+            key="0"
+            path="undefined/0-title-0"
+          >
+            <GalleryImage
+              getAccessUrl={[Function]}
+              path="/assets/dynamic/postImages/image-0.jpg"
+              source="#"
+              subTitle="subtitle-0"
+              text="text-0"
+              title="title-0"
+            />
+          </Route>
+          <Route
+            exact={true}
+            key="1"
+            path="undefined/1-title-1"
+          >
+            <GalleryImage
+              getAccessUrl={[Function]}
+              path="/assets/dynamic/postImages/image-1.jpg"
+              source="#"
+              subTitle="subtitle-1"
+              text="text-1"
+              title="title-1"
+            />
+          </Route>
+          <Route
+            exact={true}
+            key="2"
+            path="undefined/2-title-2"
+          >
+            <GalleryImage
+              getAccessUrl={[Function]}
+              path="/assets/dynamic/postImages/image-2.jpg"
+              source="#"
+              subTitle="subtitle-2"
+              text="text-2"
+              title="title-2"
+            />
+          </Route>
+          <Route
+            exact={true}
+            key="3"
+            path="undefined/3-title-3"
+          >
+            <GalleryImage
+              getAccessUrl={[Function]}
+              path="/assets/dynamic/postImages/image-3.jpg"
+              source="#"
+              subTitle="subtitle-3"
+              text="text-3"
+              title="title-3"
+            />
+          </Route>
+          <Route
+            exact={true}
+            key="4"
+            path="undefined/4-title-4"
+          >
+            <GalleryImage
+              getAccessUrl={[Function]}
+              path="/assets/dynamic/postImages/image-4.jpg"
+              source="#"
+              subTitle="subtitle-4"
+              text="text-4"
+              title="title-4"
+            />
+          </Route>
+        </AnimatedSwitch>
+      </div>
+      <div
+        className="gallery-images-selector-container four floated sidebar right"
+      >
+        <GalleryImagesSelector
+          images={
+            Array [
+              Object {
+                "getAccessUrl": [Function],
+                "path": "/assets/dynamic/postImages/image-0.jpg",
+                "source": "#",
+                "subTitle": "subtitle-0",
+                "text": "text-0",
+                "title": "title-0",
+              },
+              Object {
+                "getAccessUrl": [Function],
+                "path": "/assets/dynamic/postImages/image-1.jpg",
+                "source": "#",
+                "subTitle": "subtitle-1",
+                "text": "text-1",
+                "title": "title-1",
+              },
+              Object {
+                "getAccessUrl": [Function],
+                "path": "/assets/dynamic/postImages/image-2.jpg",
+                "source": "#",
+                "subTitle": "subtitle-2",
+                "text": "text-2",
+                "title": "title-2",
+              },
+              Object {
+                "getAccessUrl": [Function],
+                "path": "/assets/dynamic/postImages/image-3.jpg",
+                "source": "#",
+                "subTitle": "subtitle-3",
+                "text": "text-3",
+                "title": "title-3",
+              },
+              Object {
+                "getAccessUrl": [Function],
+                "path": "/assets/dynamic/postImages/image-4.jpg",
+                "source": "#",
+                "subTitle": "subtitle-4",
+                "text": "text-4",
+                "title": "title-4",
+              },
+            ]
+          }
+          onThumbnailClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;

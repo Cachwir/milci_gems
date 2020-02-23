@@ -1,0 +1,36 @@
+.gallery .container.floated  .gallery-images-selector-container {
+    padding: 0;
+    width: 300px;
+}
+.gallery .container.floated .gallery-current-element {
+    padding: 0;
+    width: 720px;
+}
+.gallery .top-image .post-img {
+    width: 100%;
+    height: 350px;
+    /*padding-top: 44.11%; !* 34:15 Aspect Ratio *!*/
+    /*position: relative; !* If you want text inside of it *!*/
+    /*overflow: hidden;*/
+}
+.gallery .top-image .post-img img {
+    max-height: 100%;
+    margin: auto;
+}
+.gallery .gallery-current-element .post {
+    margin: 40px;
+}
+.gallery .gallery-images-selector {
+    max-height: 600px;
+    overflow-y : auto;
+    padding: 20px 30px;
+}
+
+@media only screen and (max-width: 767px){
+    .gallery .gallery-current-element .post {
+        margin: 24px;
+    }
+    .gallery .container.floated  .gallery-images-selector-container {
+        width: 100%;
+    }
+}

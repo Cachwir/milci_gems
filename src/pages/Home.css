@@ -1,0 +1,26 @@
+.home .top-image {
+    display: grid;
+    grid-template-columns: 100%;
+}
+.home .top-image > * {
+    grid-row-start: 1;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    align-self: center;
+    justify-self: center;
+}
+.home .top-image .post-img {
+    width: 100%;
+    padding-top: 44.11%; /* 34:15 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+    background-image: url(/assets/images/home-main.png);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+}
+.home .ls-s1.caption-transparent {
+    top: 357px;
+    left: 40px;
+    z-index: 1;
+}

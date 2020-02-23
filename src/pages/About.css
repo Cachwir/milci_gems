@@ -1,0 +1,15 @@
+.about .page-title h2 {
+    float: none;
+}
+
+.about .contact-informations li i.icon-github {
+    margin-top: 1px;
+    margin-left: -2px;
+}
+
+@media only screen and (max-width: 767px){
+    .about .page-title h2 {
+        padding-top: 30px;
+    }
+}
+

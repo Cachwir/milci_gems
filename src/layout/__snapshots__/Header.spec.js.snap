@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should match its reference snapshot 1`] = `
+<div>
+  <div
+    id="top-line"
+  />
+  <div
+    className="container"
+  >
+    <header
+      id="header"
+    >
+      <div
+        className="ten columns"
+      >
+        <div
+          id="logo"
+        >
+          <h1>
+            <Link
+              to="/"
+            >
+              <img
+                alt="Nevia Premium Template"
+                src="/assets/theme/images/logo.png"
+              />
+            </Link>
+          </h1>
+          <div
+            id="tagline"
+          >
+            Template Without Compromises!
+          </div>
+          <div
+            className="clearfix"
+          />
+        </div>
+      </div>
+      <div
+        className="six columns"
+      >
+        <div
+          className="contact-details"
+        >
+          Contact : cachwir@gmx.com
+        </div>
+        <div
+          className="clearfix"
+        />
+      </div>
+    </header>
+    <div
+      className="clearfix"
+    />
+  </div>
+</div>
+`;
