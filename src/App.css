@@ -1,18 +1,44 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
+#logo a img {
+  width: auto;
+  height: 50px;
+  margin-top: -7px;
+}
+
+#logo-footer {
+  width: 40px;
+  -webkit-filter: brightness(10);
+  filter: brightness(10);
+}
+
 .switch-wrapper {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 100%;
   grid-template-columns: 100%;
 }
 
 .switch-wrapper > div {
+  -ms-grid-row: 1;
   grid-row-start: 1;
+  -ms-grid-row-span: 0;
   grid-row-end: 1;
+  -ms-grid-column: 1;
   grid-column-start: 1;
+  -ms-grid-column-span: 0;
   grid-column-end: 1;
 }
 
 .container.floated {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .container .floated {

@@ -7,7 +7,7 @@ function Home()
         <section className="home">
             <article className="top-image">
                 <figure className="post-img picture"></figure>
-                <h3 className="ls-s1 caption-transparent post-img-inner-text">Image in Slide Directly</h3>
+                <h3 className="ls-s1 caption-transparent post-img-inner-text">Des gemmes d'exception</h3>
             </article>
             <div className="container">
                 <article className="post">

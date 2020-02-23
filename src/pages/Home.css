@@ -1,20 +1,30 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
+
 .home .top-image {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 100%;
     grid-template-columns: 100%;
 }
 .home .top-image > * {
+    -ms-grid-row: 1;
     grid-row-start: 1;
+    -ms-grid-row-span: 0;
     grid-row-end: 1;
+    -ms-grid-column: 1;
     grid-column-start: 1;
+    -ms-grid-column-span: 0;
     grid-column-end: 1;
+    -ms-grid-row-align: center;
     align-self: center;
+    -ms-grid-column-align: center;
     justify-self: center;
 }
 .home .top-image .post-img {
     width: 100%;
     padding-top: 44.11%; /* 34:15 Aspect Ratio */
     position: relative; /* If you want text inside of it */
-    background-image: url(/assets/images/home-main.png);
+    background-image: url(/assets/images/home-main.jpg);
     background-size: cover;
     background-position-x: center;
     background-position-y: center;

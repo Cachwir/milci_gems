@@ -14,8 +14,8 @@ function Header()
                     {/* Logo */}
                     <div className="ten columns">
                         <div id="logo">
-                            <h1><Link to="/"><img src={process.env.PUBLIC_URL + "/assets/theme/images/logo.png"} alt="Nevia Premium Template" /></Link></h1>
-                            <div id="tagline">Template Without Compromises!</div>
+                            <h1><Link to="/"><img src={process.env.PUBLIC_URL + "/assets/images/logo.png"} alt="logo" /></Link></h1>
+                            <div id="tagline">Des gemmes d'exception</div>
                             <div className="clearfix"></div>
                         </div>
                     </div>

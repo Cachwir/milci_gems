@@ -11,7 +11,7 @@ function Footer()
 
                     {/* About */}
                     <div className="four columns">
-                        <img id="logo-footer" src={process.env.PUBLIC_URL + "/assets/theme/images/logo-footer.png"} alt="" />
+                        <img id="logo-footer" src={process.env.PUBLIC_URL + "/assets/images/logo.png"} alt="" />
                         <p>Propulsé par ReactJS.</p>
                         <p>Images et textes par Milci.</p>
                     </div>
