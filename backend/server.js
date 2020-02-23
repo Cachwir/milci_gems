@@ -1,6 +1,7 @@
-const express = require('express');
+const express = require('express'); // framework
 const cors = require('cors');
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); // ORM
+var helmet = require('helmet'); // for security
 const config = require('./config');
 
 require('dotenv').config();
@@ -10,6 +11,7 @@ const port = process.env.PORT || 5000;
 
 app.use(cors());
 app.use(express.json());
+app.use(helmet());
 
 const databaseConfig = config.database;
 const uri = 'mongodb://'+ databaseConfig.user +':'+ databaseConfig.password +'@'+ databaseConfig.host +':'+ databaseConfig.port +'/'+ databaseConfig.database + '?authSource=admin';
