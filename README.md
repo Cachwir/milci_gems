@@ -1,68 +1,73 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Gemmes d'exception
 
-In the project directory, you can run:
+Projet d'apprentissage de reactJS.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Les étapes suivantes impliquent que vous avez déjà installé apache, node, npm, mongodb et pm2.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+1. Clonez le projet et rendez-vous à sa racine
+2. npm install
+3. cd backend
+4. npm install
+5. créez la base de donnée sur mongodb et donnez lui une collection du nom de "posts"
+6. vous trouverez un dump de posts dans le dossier backend/dump
+7. copiez config.json.dist en config.json et remplissez dedans les informations d'accès à la bdd
+8. cd ../src/config
+9. copiez config.json.dist en config.json et entrez l'url vers le backend
+10. cd ../..
+11. npm run build
+12. cd backend
+13. pm2 start server.js
+14. cd /etc/apache2/sites-available (peut varier selon l'OS et sa version)
+15. sudo touch gemmesdexception.conf
+16. sudo nano gemmesdexception.conf
+17. Entrez la configuration suivante (avec vos informations) :
+<pre>
+\<VirtualHost *:80>
+        ServerAdmin webmaster@localhost
+        ServerName url.vers.le.site.com
+        ServerAlias www.url.vers.le.site.com
+        DocumentRoot /chemin/vers/milci_gems/build
+        \<Directory /chemin/vers/milci_gems/build>
+                Options Indexes FollowSymLinks
+                AllowOverride All
+                Order allow,deny
+                allow from all
+                Require all granted
+        \</Directory>
+\</VirtualHost>
+</pre>
+18. Sauvegardez et fermez l'éditeur
+19. sudo touch api.gemmesdexception.conf
+20. sudo nano api.gemmesdexception.conf
+21. Entrez la configuration suivante (avec vos informations) :
+<pre>
+\<VirtualHost *:80>
+   ServerAdmin contact@mondomaine.fr
+   ServerName url.vers.l.api.com
+   ProxyRequests off
+   \<Proxy *>
+      Order deny,allow
+      Allow from all
+   \</Proxy>
+   \<Location />
+      ProxyPass http://127.0.0.1:5000/
+      ProxyPassReverse http://127.0.0.1:5000/
+   \</Location>
+\</VirtualHost>
+</pre>
+22. Sauvegardez et fermez l'éditeur
+23. sudo a2ensite gemmesdexception.conf
+24. sudo a2ensite api.gemmesdexception.conf
+25. Votre site devrait être accessible à l'url renseignée.
 
-### `npm test`
+## Tests
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ce projet est fourni une batterie de tests unitaires.<br>
+Pour les lancer, les modules npm de dev doivent être installés.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Pour lancer les tests : `npm test`<br>
+Pour faire un audit de coverage : `npm test -- --coverage --watchAll=false`
