@@ -23,9 +23,6 @@ function Header()
                     {/* Social / Contact */}
                     <div className="six columns">
 
-                        {/* Contact Details */}
-                        <div className="contact-details">Contact : cachwir@gmx.com</div>
-
                         <div className="clearfix"></div>
 
                     </div>
