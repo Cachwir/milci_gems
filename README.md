@@ -1,8 +1,9 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projet créé via [Create React App](https://github.com/facebook/create-react-app).
 
 ## Gemmes d'exception
 
-Projet d'apprentissage de reactJS.
+Projet d'apprentissage de reactJS.<br>
+Ce site est dédié à l'amour de la gémologie.
 
 ## Installation
 
@@ -71,3 +72,7 @@ Pour les lancer, les modules npm de dev doivent être installés.
 
 Pour lancer les tests : `npm test`<br>
 Pour faire un audit de coverage : `npm test -- --coverage --watchAll=false`
+
+## Remerciements
+
+Je tiens à remercier Milci, un ami apprenti gémologue, de m'avoir fourni les images et les textes du site.
