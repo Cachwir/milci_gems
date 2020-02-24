@@ -66,7 +66,7 @@ function About()
                         <h3 className="margin">À propos du site</h3>
                         <p className="margin">
                             Ce site a été conçu avec reactJS dans le cadre de l'apprentissage du-dit framework.<br />
-                            Un grand merci à Milci pour avoir fourni le titre du site, ses images et ses textes.<br />
+                            Un grand merci à Milci pour avoir fourni les images et textes du site.<br />
                             Pour me contacter, privilégiez l'envoi d'un email ou ajoutez-moi sur Discord.
                         </p>
 
