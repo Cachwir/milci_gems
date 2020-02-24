@@ -31,9 +31,9 @@ function About()
                             <h4>Le développeur</h4>
                             <p>
                                 Né en Bretagne, Cachwir a appris lui-même le développement web (html, css, php, symfony,
-                                javascript, react, angular, cordova, ionic). Après un stage et un CDI dans le sud de la
-                                France, il se lance dans l'auto-entreprenariat avec comme projet de partir vivre au
-                                Japon.<br />
+                                javascript, react, angular, cordova, ionic).<br />
+                                Après un stage et un CDI dans le sud de la France, il se lance dans l'auto-entreprenariat
+                                avec comme projet de partir vivre au Japon.
                             </p>
                         </div>
 

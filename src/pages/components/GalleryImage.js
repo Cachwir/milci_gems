@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import nl2br from 'react-nl2br';
 
 const GalleryImage = ({ path, title, subTitle, text, source }) => (
     <div>
@@ -10,8 +11,8 @@ const GalleryImage = ({ path, title, subTitle, text, source }) => (
         </article>
         <article className="post">
             <h3 className="margin">{title}</h3>
-            <span>{subTitle}</span>
-            <p>{text}</p>
+            <span>{subTitle}</span><br /><br />
+            <p>{nl2br(text)}</p>
             <div className="right">
                 <a href={source} target="_blank" rel="noopener noreferrer">source</a>
             </div>

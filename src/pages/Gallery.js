@@ -7,7 +7,7 @@ import GalleryImage from "./components/GalleryImage";
 import GalleryImagesSelector from "./components/GalleryImagesSelector";
 
 import "./Gallery.css";
-import {localStorageGet, localStorageSet} from "../lib/functions";
+import {localStorageGet, localStorageSet, escape} from "../lib/functions";
 import Config from "../lib/Config";
 
 class GalleryWithoutRouter extends Component
@@ -71,12 +71,14 @@ class GalleryWithoutRouter extends Component
 
         imagesData.forEach((imageData) =>
         {
+            const escapedImageData = escape(imageData);
+
             images.push({
-                title: imageData.title,
-                subTitle: imageData.subtitle,
-                path: this.PATH_TO_POST_IMAGES + imageData.image,
-                text: imageData.text,
-                source: imageData.source,
+                title: escapedImageData.title,
+                subTitle: escapedImageData.subtitle,
+                path: this.PATH_TO_POST_IMAGES + escapedImageData.image,
+                text: escapedImageData.text,
+                source: escapedImageData.source,
                 getAccessUrl: this.getImageUrl,
             });
         });
