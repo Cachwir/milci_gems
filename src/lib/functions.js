@@ -15,7 +15,7 @@ export function escapeString(text) {
         '<': '&lt;',
         '>': '&gt;',
         '"': '&quot;',
-        "'": '&#039;'
+        "'": '&acute;'
     };
 
     return text.replace(/[&<>"']/g, function(m) { return map[m]; });
